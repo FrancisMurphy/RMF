@@ -1,10 +1,11 @@
 package com.frank.RMF.Manager;
 
-public class RMFPersistManager {
-	
-	private boolean init() {
-		
+public class RMFPersistManager implements IRMFManager{
+
+	public boolean init() {
+		// TODO Auto-generated method stub
 		return false;
 	}
+	
 
 }

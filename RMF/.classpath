@@ -23,5 +23,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="N:/redis/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bz/Desktop/jar/commons-pool2-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bz/Desktop/jar/jedis-2.9.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

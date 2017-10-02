@@ -1,6 +1,6 @@
 package com.frank.RMF.Manager;
 
-public class RMFManager {
+public class RMFManager implements IRMFManager{
 	
 	public boolean init() {
 		

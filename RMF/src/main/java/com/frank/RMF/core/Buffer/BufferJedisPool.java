@@ -1,7 +1,7 @@
 package com.frank.RMF.core.Buffer;
 
 import java.util.Properties;
-
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import redis.clients.jedis.Jedis;
@@ -20,7 +20,7 @@ public class BufferJedisPool {
 
 			Properties props = new Properties();
 
-			props.load(BufferJedisPool.class.getClassLoader().getResourceAsStream("src/redis.properties"));
+			props.load(new FileInputStream("src/main/java/redis.properties"));
 
 			// 创建jedis池配置实例
 
@@ -28,11 +28,11 @@ public class BufferJedisPool {
 
 			// 设置池配置项值
 
-			config.setMaxActive(Integer.valueOf(props.getProperty("jedis.pool.maxactive")));
+			config.setMaxTotal((Integer.valueOf(props.getProperty("jedis.pool.maxtotal"))));
 
 			config.setMaxIdle(Integer.valueOf(props.getProperty("jedis.pool.maxIdle")));
 
-			config.setMaxWait(Long.valueOf(props.getProperty("jedis.pool.maxWait")));
+			config.setMaxWaitMillis(Long.valueOf(props.getProperty("jedis.pool.maxWait")));
 
 			config.setTestOnBorrow(Boolean.valueOf(props.getProperty("jedis.pool.testOnBorrow")));
 
